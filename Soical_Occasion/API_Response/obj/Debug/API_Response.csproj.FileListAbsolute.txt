@@ -1,0 +1,8 @@
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\bin\Debug\API_Response.exe.config
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\bin\Debug\API_Response.exe
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\bin\Debug\API_Response.pdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\bin\Debug\Newtonsoft.Json.dll
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\bin\Debug\Newtonsoft.Json.xml
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\obj\Debug\API_Response.csprojResolveAssemblyReference.cache
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\obj\Debug\API_Response.exe
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\API_Response\obj\Debug\API_Response.pdb
