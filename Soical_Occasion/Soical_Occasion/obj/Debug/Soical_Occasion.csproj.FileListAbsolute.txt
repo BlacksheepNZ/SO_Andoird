@@ -18,10 +18,10 @@ C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\re
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\values\style.xml
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\anim\slide_right.xml
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\anim\slide_up.xml
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\anim\slide_down.xml
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\R.cs.flag
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\uploadflags.txt
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Soical_Occasion.dll.mdb
-C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\Soical_Occasion.csprojResolveAssemblyReference.cache
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Java.Interop.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Mono.Android.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Mono.Data.Tds.dll.mdb
@@ -53,6 +53,5 @@ C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\an
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\System.Transactions.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\anim\slide_down.xml
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\Soical_Occasion.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Soical_Occasion.dll.mdb

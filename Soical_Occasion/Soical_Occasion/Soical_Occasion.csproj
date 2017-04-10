@@ -101,9 +101,6 @@
     <AndroidResource Include="Resources\anim\slide_up.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SavingData\" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\anim\slide_down.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
