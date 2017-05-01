@@ -1,2 +1,2 @@
 android.app.Application
-Soical_Occasion.Soical_Occasion
+com.xamarin.docs.android.Soical_Occasion

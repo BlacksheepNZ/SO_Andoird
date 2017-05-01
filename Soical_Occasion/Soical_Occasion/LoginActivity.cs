@@ -9,7 +9,7 @@ using System;
 
 namespace Soical_Occasion
 {
-    [Activity(Label = "Soical_Occasion", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
+    [Activity(Label = "Soical_Occasion", Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
     public class LoginActivity : Activity
     {
         private Button _buttonSignUp;

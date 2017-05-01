@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Soical_Occasion.Soical_Occasion" android:versionCode="1" android:versionName="1.0">
-	<uses-sdk android:minSdkVersion="16" />
-	<application android:label="Soical_Occasion"></application>
-</manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="4.5" package="com.xamarin.docs.android.Soical_Occasion" android:versionCode="6">
+  ...
+  <application android:label="Soical_Occasion"><!-- Put your Google Maps V2 API Key here. --><meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDi9Xkm-WHWBoAATfgjFCd2ElX1kRMxXho" /><meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /></application><uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /><uses-permission android:name="android.permission.INTERNET" /><uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /><uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><uses-feature android:glEsVersion="0x00020000" android:required="true" /><uses-sdk /></manifest>
