@@ -185,6 +185,7 @@
     <Content Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </Content>
+    <AndroidResource Include="Resources\drawable\bluedot.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\" />

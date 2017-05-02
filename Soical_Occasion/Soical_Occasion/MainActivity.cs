@@ -11,16 +11,24 @@ using Android.Locations;
 using Android.Runtime;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
+
 namespace Soical_Occasion
 {
     [Activity(Label = "Soical_Occasion", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity, IOnMapReadyCallback, ILocationListener
     {
-        GoogleMap _googleMap;
-        MapFragment _mapFragment;
-        LocationManager _locationManager;
-        Location _currentLocation;
-        string _provider;
+        private GoogleMap _googleMap;
+        private MapFragment _mapFragment;
+        private LocationManager _locationManager;
+        private Location _currentLocation;
+        private string _provider;
+
+        private Accuracy _accuracy = Accuracy.Fine;
+        private Power _power = Power.Medium;
+
+        private float _cameraZoom = 18.0f;
+        GroundOverlay _myOverlay;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -28,12 +36,10 @@ namespace Soical_Occasion
 
             SetContentView(Resource.Layout.Main);
             SetUpMap();
-            SetUpLocation();
         }
 
         protected override void OnResume()
         {
-            _locationManager.RequestLocationUpdates(_provider, 0, 0, this);
             base.OnResume();
         }
 
@@ -45,22 +51,11 @@ namespace Soical_Occasion
 
         public void SetUpMap()
         {
-
             if (_mapFragment == null)
             {
                 _mapFragment = FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map);
                 _mapFragment.GetMapAsync(this);
             }
-
-
-            //_mapFragment.GetMapAsync(this);
-
-            //if (_googleMap != null)
-            //{
-            //    _googleMap.UiSettings.ZoomControlsEnabled = true;
-            //    _googleMap.UiSettings.CompassEnabled = true;
-            //    _googleMap.UiSettings.MyLocationButtonEnabled = true;
-            //}
         }
 
         public void SetUpLocation()
@@ -68,8 +63,8 @@ namespace Soical_Occasion
             _locationManager = (LocationManager)GetSystemService(LocationService);
             Criteria criteriaForLocationService = new Criteria
             {
-                Accuracy = Accuracy.Fine,
-                PowerRequirement = Power.Medium
+                Accuracy = _accuracy,
+                PowerRequirement = _power
             };
 
             _provider = _locationManager.GetBestProvider(new Criteria(), true);
@@ -84,14 +79,36 @@ namespace Soical_Occasion
             {
                 OnLocationChanged(_currentLocation);
             }
+
+            _locationManager.RequestLocationUpdates(_provider, 0, 0, this);
         }
 
         public void OnMapReady(GoogleMap googleMap)
         {
             _googleMap = googleMap;
 
-            _googleMap.UiSettings.ZoomControlsEnabled = true;
-            _googleMap.UiSettings.CompassEnabled = true;
+            googleMap.MyLocationEnabled = true;
+            googleMap.MyLocationButtonClick += LocationButtonClick;
+
+            googleMap.UiSettings.MapToolbarEnabled = false;
+            googleMap.UiSettings.ZoomControlsEnabled = true;
+            googleMap.UiSettings.CompassEnabled = true;
+
+            SetUpLocation();
+
+            //Set up current position/image
+            BitmapDescriptor image = BitmapDescriptorFactory.FromResource(Resource.Drawable.bluedot);
+            GroundOverlayOptions groundOverlayOptions = new GroundOverlayOptions()
+                .Position(LocationToLatLong(_currentLocation), 10, 10)
+                .InvokeImage(image);
+            _myOverlay = _googleMap.AddGroundOverlay(groundOverlayOptions);
+
+            MoveCamera(_currentLocation);
+        }
+
+        private void LocationButtonClick(object sender, GoogleMap.MyLocationButtonClickEventArgs e)
+        {
+            MoveCamera(_currentLocation);
         }
 
         public void AddMarker(string name, LatLng latlng)
@@ -102,38 +119,31 @@ namespace Soical_Occasion
             _googleMap.AddMarker(markerOpt1);
         }
 
-        async System.Threading.Tasks.Task<LatLng> GetCurrentLocation()
-        {
-            try
-            {
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;
-                var position = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
-                if (position == null)
-                    return null;
-                
-                return new LatLng(position.Latitude, position.Longitude);
-            }
-            catch (Exception ex)
-            {
-                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
-                return null;
-            }
-        }
-
         public void OnLocationChanged(Location location)
         {
-            LatLng latlng = new LatLng(location.Latitude, location.Longitude);
+            MoveCamera(location);
+        }
 
+        private void MoveCamera(Location location)
+        {
             if (_googleMap != null)
             {
-                _googleMap.MoveCamera(CameraUpdateFactory.NewLatLng(latlng));
-                _googleMap.AnimateCamera(CameraUpdateFactory.ZoomTo(10));
-                AddMarker("my position, location", latlng);
+                _googleMap.MoveCamera(CameraUpdateFactory.NewLatLng(LocationToLatLong(location)));
+                _googleMap.AnimateCamera(CameraUpdateFactory.ZoomTo(_cameraZoom));
+
+                if (_myOverlay != null)
+                {
+                    _myOverlay.Position = LocationToLatLong(location);
+                }
             }
-            //_googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(location.Latitude, location.Longitude), 1));
-            //throw new NotImplementedException();
         }
+
+        private LatLng LocationToLatLong(Location location)
+        {
+            return new LatLng(location.Latitude, location.Longitude);
+        }
+
+        #region Unused
 
         public void OnProviderDisabled(string provider)
         {
@@ -149,5 +159,7 @@ namespace Soical_Occasion
         {
             //throw new NotImplementedException();
         }
+
+        #endregion
     }
 }

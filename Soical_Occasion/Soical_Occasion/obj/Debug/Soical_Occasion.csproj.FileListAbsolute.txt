@@ -97,5 +97,6 @@ C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\an
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Geolocator.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\res\drawable\bluedot.png
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\Soical_Occasion.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Soical_Occasion.dll.mdb
