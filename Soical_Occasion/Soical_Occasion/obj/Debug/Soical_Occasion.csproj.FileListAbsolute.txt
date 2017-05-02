@@ -89,5 +89,13 @@ C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Ge
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Geolocator.Plugin.Abstractions.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Geolocator.Plugin.Abstractions.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Geolocator.Plugin.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Plugin.Geolocator.Abstractions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Plugin.Geolocator.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Plugin.Permissions.Abstractions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Plugin.Permissions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Geolocator.Abstractions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Geolocator.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
+C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\obj\Debug\Soical_Occasion.dll.mdb
 C:\Users\matthew\Desktop\SO_Andoird\Soical_Occasion\Soical_Occasion\bin\Debug\Soical_Occasion.dll.mdb
